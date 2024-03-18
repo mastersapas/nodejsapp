@@ -1,0 +1,13 @@
+# Publish on Docher Local
+
+docker build --tag lab2-pt1 .
+docker run --name lab2 -p 3000:3000 -d lab2-pt1
+
+#   Publish on Docker HUB
+
+docker build --tag sapasboss/meicmworksheet2lb1 .
+docker push sapasboss/meicmworksheet2lb1
+
+# docker tag sapasboss/meicmworksheet2lb1 sapasboss/meicmworksheet2lb1new
+docker run -p 3000:3000 sapasboss/meicmworksheet2lb1
+
